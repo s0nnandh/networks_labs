@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage[a4paper,bottom = 1.5cm,left = 1.5cm,right = 1.5cm,top = 1.5cm]{geometry}
+\usepackage[rightcaption]{sidecap}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[document]{ragged2e}
+\usepackage{titling}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setlength{\parindent}{7em} 
+\lhead{190050055-190050077-190050079}
+\rhead{Wirless Measurments}
+\cfoot{Page \thepage}
+
+\title{\textbf{LAB 1 : Wirless Measurments}}
+\author{190050055,190050077,190050079}
+\cleardoublepage
+
+\begin{document}
+
+\maketitle 
+
+
+\newpage
+{\huge A)}\\
+
+\vspace{0.5cm}
+For this lab assignment , all three of our team-mates recorded signal strength. And the recorded data is pictorially represented below. And for all three figures, for signal strength ranging from \textcolor{green}{0dBm to -85dVm}  corresponds to \textbf{green color}, for signal strength ranging from \textcolor{yellow}{-85dBm to -105dBm} corresponds to \textbf{yellow color}, and for signal strength  \textcolor{red}{$\leq$ -105dBm} corresponds to \textbf{red color}.  
+
+\begin{SCfigure}[0.5][h]
+\caption{Kranthi.png}
+\includegraphics[width=0.7\textwidth]{kranthi-1.png}
+\end{SCfigure}
+\begin{SCfigure}[0.5][h]
+\caption{Sonnandh.png}
+\includegraphics[width=0.7\textwidth]{sonnandh-1.png}
+\end{SCfigure}
+\begin{SCfigure}[0.5][h]
+\caption{Bharani.png}
+\includegraphics[width=0.7\textwidth]{Bharani.pdf}
+\end{SCfigure}
+\vspace{8pt}
+\newpage
+{\huge B)}\\
+
+\vspace{0.5cm}
+\textbf{\Large{Figure-1}}\\
+During the measurement of signal strength for Figure 1, phone was connected to a total of three unique-base-stations (eNodeBIDs), having eNodeBIDs as follows:
+\vspace{-8pt}
+\begin{itemize}[itemsep = -2 mm]
+\item 941076
+\item 941063
+\item 941105
+\end{itemize}
+\vspace{0.5cm}
+\textbf{\Large{Figure-2}}\\
+ During the measurement of signal strength for Figure 2, phone was connected to a total of six unique-base-stations (eNodeBIDs), having eNodeBIDs as follows:
+ \vspace{-8pt}
+ \begin{itemize}[itemsep = -2mm]
+     \item1568
+ \item6185
+ \item132086
+ \item931
+ \item9021
+ \item132188
+ \end{itemize}
+ \vspace{0.5cm}
+ \textbf{\Large{Figure-3}}\\
+ During the measurement of signal strength for Figure 3, phone was connected to a total of two unique-base-stations (eNodeBIDs), having eNodeBIDs as follows:
+ \vspace{-8pt}
+ \begin{itemize}[itemsep = -2mm]
+     \item 941062
+     \item 941076
+ \end{itemize}
+  \vspace{0.5cm}
+ {\huge C)}\\
+
+ \vspace{0.5cm}
+\textbf{\Large{For Figure 1:}}\\
+ The reasons for poor connection may be because the phone is far away from the base station, and that region is more crowded when compared to other regions covered while talking the measurement. The sudden change from red to green is due to change in connection with the base station(i.e phone is now connected to a different base station which is near-by with better signal).
+\\
+\newpage
+\textbf{\Large{For Figure 2:}}\\
+Since we can see that the signal was green and yellow for the most of 
+the time for Figure 2. This means that the signal strength 
+was good but the signal did change from green to yellow ,The reason for this is that if we
+notice properly in the map of Figure 2 the signal changed at the main road which has more tall
+buildings nearby (may act as obstacles) when compared to the inner parts of the town. And also one of the
+reasons is that  Cellular signals have a hard time passing through metal and concrete which are essential materials of most buildings. And another reason for poor signal could also be high Cellular Traffic at that moment of observation.\\
+\vspace{8pt}
+\textbf{\Large{For Figure 3:}}\\
+ The reasons for poor connection may be because the area is surrounded by tall buildings and crowded(i.e many obstacles),due to which there might be a destructive interference of the signal waves with possibly other signal waves or also itself by means of reflection with nearby surroundings.The another may be because the base station may be far away from that region.
+\vspace{1cm}\\
+{\huge D)}\\
+\vspace{0.5cm}
+The images below are the plots representing,how signal strength (\textbf{RSRP: Reference signal received power}) varies with time at a fixed location.(\textit{The measurements for these three plots taken from three different locations})\\
+\begin{SCfigure}[0.5][h]
+    \centering
+\caption{RSRP(in dBms) vs time(in secs)}
+\includegraphics[width=0.7\textwidth]{WhatsApp Image 2021-01-17 at 10.57.01 PM.jpeg}
+\end{SCfigure}
+
+\begin{SCfigure}[0.5][h]
+    \centering
+\caption{RSRP(in dBms) vs time(in secs)}
+\includegraphics[width=0.7\textwidth]{WhatsApp Image 2021-01-18 at 7.47.34 PM.jpeg}
+\end{SCfigure}
+
+\begin{SCfigure}[0.5][h]
+\caption{RSRP(in dBms) vs time(in secs)}
+\includegraphics[width=0.7\textwidth]{WhatsApp Image 2021-01-18 at 7.47.17 PM.jpeg}
+\end{SCfigure}
+\newpage
+For all the three plots ,time is on X-axis, RSRP is on Y-axis.\\
+\vspace{8pt}
+From the above plots it can said that,while standing in a fixed position, the variation signal strength (\textbf{RSRP: Reference signal received power}) with time is different for different locations.However,for each plot, the variation in RSRP is only few dBms from the mean of RSRP values recording during that entire measurement.
+
+\end{document}
