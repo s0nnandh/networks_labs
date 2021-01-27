@@ -34,6 +34,7 @@
 \rhead{Network Diagnostic Tools}
 \cfoot{Page \thepage}
 \renewcommand{\footrulewidth}{1pt}
+\newcommand{\tbf}[1]{\textbf{#1}}
 \setcounter{tocdepth}{2}
 \usepackage[utf8]{inputenc}
 \begin{document}
@@ -48,29 +49,31 @@
 
 
 
-\large{TABLES}
+\large{Ipconfig}
 
 \begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{|c| c| c| c|}
          \hline
-         \textbf{Sonnandh} & \textbf{Sonnandh} & \textbf{Bharani} & \textbf{Kranthi}\\
+         \textbf{Fields} & \textbf{Sonnandh} & \textbf{Bharani} & \textbf{Kranthi}\\
          \hline
-         $Interface$& Cabi & Cabi & uhcueg \\
+         $Interface$& Wifi & Wifi & Wifi \\
          \hline
-         $Ipv4$& Cabi & safc $(-1)^n$ & uhcueg \\
+         $Ipv4$& 192.168.0.100 & 192.168.0.100  & 192.168.0.100 \\
          \hline
-         $IPv6$&  Cabi & euvgy $(-1)^n$ & uhcueg \\
+         $IPv6$&  fd01::fa2e:2190:4a08:3142 & fd01::fa2e:2190:4a08:3142  & fd01::fa2e:2190:4a08:3142 \\
          \hline
-         $MAC$&  Cabi & dvcgavuh  $(-1)^n$ & uhcueg \\
+         $MAC$&  6C:6A:77:8E:FF:53 & 6C:6A:77:8E:FF:53   & 6C:6A:77:8E:FF:53 \\
          \hline
-         $MTU$ &  Cabi & idvuyvc & ugduysv\\
+         $Queue length$ &  1000 & 1000 & 1000\\
+         \hline
+         $MTU$ &  1500 & 1500 & 1500\\
          \hline        
           
     \end{tabular}%
 }
-    \caption{Some common time complexities}
+    \caption{Ipconfig Data on respective local amchines}
     \label{Table 1:}
 \end{table}
 
@@ -96,9 +99,40 @@
 %     \label{Table 1:}
 % \end{table}
   
-  
-  
-This table user multirow as well as multicolumn. Replicate it as well as you can.
+\tbf{MTU} stands for \tbf{Maximum Transmission unit} which is measured in \tbf{bytes}.
+
+\huge{Traceroute}
+
+
+\huge{Ping}
+
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|c| c| c| c|}
+         \hline
+         \textbf{Domain Name} & \textbf{IP Adress} & \textbf{Location} & \textbf{RTT(in ms)}\\
+         \hline
+         google.com& 8.8.8.8 & USA & 40.043 \\
+         \hline
+         google.com& 172.217.163.68 & USA  & 38.075 \\
+         \hline
+         cloudflare&  1.1.1.1 & Australia  & 46.195 \\
+         \hline
+         telstra.com.au&  139.130.4.5 & Australia   & 196.374 \\
+         \hline
+         $Queue length$ &   205.210.42.205 & 1000 & 1000\\
+         \hline
+         $MTU$ &  1500 & 1500 & 1500\\
+         \hline        
+          
+    \end{tabular}%
+}
+    \caption{Ping Data}
+    \label{Table 1:}
+\end{table}
+
+\huge{Iperf}
 
 
 
