@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage[a4paper,left=1in,right=1in,bottom=1in]{geometry}
+\usepackage[parfill]{parskip}
+\usepackage{ragged2e}
+\usepackage{amsmath} 
+\usepackage{amsthm} 
+\usepackage{graphics}
+\usepackage{amssymb}
+\usepackage{upgreek}
+\usepackage{listings}
+\usepackage{esint}
+\usepackage{floatrow}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary} [theorem] {Corollary}
+\newtheorem{proposition}{Proposition}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\usepackage[ruled,linesnumbered,vlined]{algorithm2e}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{name}{rgb}{0.5,0.5,0.5}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\newcommand{\y}[1]{\mathcal{O}(#1)}
+\pagestyle{fancy}
+\fancyhf{}
+%\setlength{\parindent}{7em} 
+\lhead{190050030-190050055}
+\rhead{Software Systems Laboratory}
+\cfoot{Page \thepage}
+\renewcommand{\footrulewidth}{1pt}
+\setcounter{tocdepth}{2}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\title{Network Diagnostic Tools}
+\author{190050055-190050077,1900500079}
+\date{January, 2021}
+\maketitle
+%\tableofcontents
+\thispagestyle{empty}
+\clearpage
+\pagenumbering{arabic}
+
+
+
+\large{TABLES}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c|l}
+         \hline
+         \textbf{Complexity} & \textbf{Example}\\
+         \hline
+         $\y1$& Computing $(-1)^n$ \\
+         \hline
+         \multirow{2}{*}{$\y {log(n)}$} & Binary Search\\
+         &Insertion \& Removal from a min-heap\\
+         \hline
+         \multirow{2}{*}{$\y {nlog(n)}$} & Merge Sort \\
+         & Fast Fourier Transform \\
+         \hline
+         \multirow{2}{*}{$\y {n^2}$} & Bubble Sort \\
+         & First attempt at a problem which has a linear time solution\\
+         \hline
+         $2^{\y{log(n)}} $ & AKS Primarlity Test\\
+         \hline
+         \multicolumn{2}{c}{You might want to define a macro to write this notation conventently }\\
+         \hline
+         
+          
+    \end{tabular}
+    \caption{Some common time complexities}
+    \label{Table 1:}
+\end{table}
+  
+  
+This table user multirow as well as multicolumn. Replicate it as well as you can.
+
+
+
+\end{document}
+ 
