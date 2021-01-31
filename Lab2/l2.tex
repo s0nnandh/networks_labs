@@ -1,9 +1,10 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage[a4paper,left=1in,right=1in,bottom=1in]{geometry}
 \usepackage[parfill]{parskip}
 \usepackage{ragged2e}
 \usepackage{amsmath} 
-\usepackage{amsthm} 
+\usepackage{amsthm}
+\usepackage{enumitem}
 \usepackage{graphics}
 \usepackage{amssymb}
 \usepackage{upgreek}
@@ -17,10 +18,7 @@
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
 \usepackage[ruled,linesnumbered,vlined]{algorithm2e}
-\usepackage{xcolor}
 \usepackage{listings}
-\usepackage{color}
-\definecolor{name}{rgb}{0.5,0.5,0.5}
 \usepackage{hyperref}
 \usepackage{url}
 \usepackage{multirow}
@@ -48,102 +46,215 @@
 \pagenumbering{arabic}
 
 
-
-\large{Ipconfig}
-
+\sffamily
+\centerline{\Large{(i)\textbf{Ifconfig}}}
+\normalsize
 \begin{table}[H]
     \centering
-    \resizebox{\textwidth}{!}{%
+    \resizebox{\textwidth}{0.105\textwidth}{%
     \begin{tabular}{|c| c| c| c|}
          \hline
-         \textbf{Fields} & \textbf{Sonnandh} & \textbf{Bharani} & \textbf{Kranthi}\\
+         \textbf{Fields} & \textbf{190050055} & \textbf{190050079} & \textbf{190050077}\\
          \hline
-         $Interface$& Wifi & Wifi & Wifi \\
+         $\text{Interface}$& Wifi & Wifi & Wifi \\
          \hline
-         $Ipv4$& 192.168.0.100 & 192.168.0.100  & 192.168.0.100 \\
+         ${\text{IPv4}}$& 192.168.0.100 & 192.168.55.103  & 192.168.0.128  \\
          \hline
-         $IPv6$&  fd01::fa2e:2190:4a08:3142 & fd01::fa2e:2190:4a08:3142  & fd01::fa2e:2190:4a08:3142 \\
+         ${\text{IPv6}}$&  fd01::fa2e:2190:4a08:3142 & fe80::5396:26d3:9c71:b735   & fd01::56ef:d2c3:44ef:fc94\\
          \hline
-         $MAC$&  6C:6A:77:8E:FF:53 & 6C:6A:77:8E:FF:53   & 6C:6A:77:8E:FF:53 \\
+         $\text{Hardware address, MAC}$&  6C:6A:77:8E:FF:53 & C0:E4:34:55:49:B7   & 90:32:4B:68:AB:AB \\
          \hline
-         $Queue length$ &  1000 & 1000 & 1000\\
+         $\text{Transmit Queue Length}$ &  1000 & 1000 & 1000\\
          \hline
-         $MTU$ &  1500 & 1500 & 1500\\
+         $\text{MTU}$ &  1500 & 1500 & 1500\\
          \hline        
           
     \end{tabular}%
 }
-    \caption{Ipconfig Data on respective local amchines}
+    \caption{Ifconfig Data on respective local machines}
     \label{Table 1:}
 \end{table}
 
-% \begin{table}[H]
-%     \centering
-%     \begin{tabular}{|c| c| c|}
-%                  \hlinebouygues.iperf.fr
-%                  \textbf{Sonnandh} & \textbf{Bharani} & \textbf{Kranthi}\\
-%                  \hline
-%                  $Interface$& Cabi & uhcueg \\
-%                  \hline
-%                  $Ipv4$& safc $(-1)^n$ & uhcueg \\
-%                  \hline
-%                  $IPv6$& euvgy $(-1)^n$ & uhcueg \\
-%                  \hline
-%                  $MAC$& dvcgavuh  $(-1)^n$ & uhcueg \\
-%                  \hline
-%                  $MTU$ & idvuyvc & ugduysv\\
-%                  \hline        
-                  
-%             \end{tabular}
-%     \caption{Some common time complexities}
-%     \label{Table 1:}
-% \end{table}
-  
-\tbf{MTU} stands for \tbf{Maximum Transmission unit} which is measured in \tbf{bytes}.
+\begin{itemize}[itemsep = -1mm]
+    \item The number of bits used for IPv4 address is 32. 
+    \item The number of bits used for IPv6 address is 128.
+    \item The number of bits used for Hardware address(MAC) is 48.
+    \item \tbf{\text{MTU}} stands for \tbf{Maximum Transmission unit} which is measured in \tbf{bytes}.maximum transmission unit (MTU) is the size of the largest protocol data unit
+that can be communicated in a single network layer transaction.
+    \item The Transmit Queue Length (txqueuelen) is a TCP/IP stack network interface value that sets the number of
+packets allowed per kernel transmit queue of a network interface device.
+    \item The Transmit Queue Length is measured in \tbf{packets}.
+\end{itemize}
 
-\tbf{\large{Traceroute}}
+\vspace{0.2in}
+{
+\centering{\Large(ii)\tbf{{Traceroute}}}\\
+\vspace{8pt}}
 \normalsize
+\vspace{-8pt}
+Domain Name : \tbf{google.com} 
+\begin{itemize}
+    \item Data recorded by 190050055:\\
+From local machine \\
+: Took 12 hops and reached 142.250.71.36 IP address with RTT 46.6ms.\\
+From US(Seattle)\\
+: Took 8 hops and reached 172.217.3.196 IP address with RTT 24.935ms. \\
+From Croatia(Prague)\\
+: Took 7 hops and reached 216.58.201.68 IP address with RTT 15.45ms. \\
+From Saudi-Arabia(Riyadh) \\
+: Took 13 hops and reached 172.217.169.68 IP address with RTT 79.840ms. \\
+From Austria(Vienna)    \\
+: Took 6 hops and reached 172.217.23.100 IP address with RTT 13.25ms. \\
+From South Korea(Seoul)  \\
+: Took 17 hops and reached 172.217.175.228 IP address with RTT 27.455ms.\\   \item Data recorded by 190050077:\\
+From local machine      \\
+: Took 7 hops and reached 172.217.160.196  IP address with RTT 21.796ms.\\
+From Paris(France)       \\
+: Took 8 hops and reached 16.58.213.164 IP address with RTT 0.575ms.\\
+From Virginia(US)       \\
+: Took 9 hops and reached 172.217.13.228 IP address with RTT 1.406ms.\\
+From Sydney(Australia)   \\
+: Took 8 hops and reached 142.250.67.4 IP address with RTT 0.259ms.\\
+From St.Petersburg(Russia) \\
+: Took 10 hops and reached 216.58.209.164 IP address with RTT 6.176ms.\\
+From Pune(India)          \\
+: Took 7 hops and reached 142.250.67.196 IP address with RTT 4.168ms.\\
 
-Domain Name : \tbf{google.com} \\
-
-From local machine           : Took 7 hops and reached 142.250.71.36 Ip adress with RTT 46.6ms.\\
-From US(Seattle)           : Took 8 hops and reached 172.217.3.196 Ip adress with RTT 24.935ms. \\
-From Croatia(Prague)         : Took 7 hops and reached 216.58.201.68 Ip adress with RTT 15.45ms. \\
-From Saudi-Arabia(Riyadh)  : Took 13 hops and reached 172.217.169.68 Ip adress with RTT 79.840ms. \\
-From Austria(Vienna)       : Took 6 hops and reached 172.217.23.100 Ip adress with RTT 13.25ms. \\
-From South Korea(Seoul)      : Took 17 hops and reached 172.217.175.228 Ip adress with RTT 27.455ms.\\  
-
+\item Data recorded by 190050079:\\
+From local machine    \\
+: Took 7 hops and reached 142.250.182.196 IP address with RTT 31ms.\\
+From London(UK)    \\
+: Took 6 hops and reached 172.217.20.132 IP address with RTT 1.306ms.\\
+From Toronto(CA)  \\
+: Took 7 hops and reached 172.217.165.4 IP address with RTT 0.691ms.\\
+From Perth(Australia)   \\
+: Took 8 hops and reached 216.58.199.36 IP address with RTT 46.308ms.\\
+From Vancouver(CA)    \\
+: Took 7 hops and reached  172.217.5.196 IP address with RTT 3.483ms.\\
+From Auckland(Newzland)\\
+: Took 11 hops and reached 142.250.66.164 IP address with RTT 35.356ms.\\ 
+\end{itemize}
 
 Domain Name : \tbf{cnn.com} \\
+\begin{itemize}
+    \item Data recorded by 190050055:\\
+From local machine       \\
+: Took 5 hops and reached 151.101.153.67 IP address with RTT 47.042ms.\\
+From US(Seattle)       \\
+: Took 5 hops and reached 151.101.53.67 IP address with RTT 22.469ms. \\
+From Croatia(Prague) \\
+: Took 8 hops and reached 199.232.17.67 IP address with RTT 13.528ms . \\
+From Saudi-Arabia(Riyadh)\\
+: Took 6 hops and reached 151.101.1.67 IP address with RTT 22.6ms. \\
+From Austria(Vienna)    \\
+: Took 7 hops and reached 151.101.1.67 IP address with RTT 10.838ms. \\
+From South Korea(Seoul)   \\
+: Took 11 hops and reached 151.101.109.67 IP address with RTT 24.44ms.\\ 
 
-From local machine           : Took 5 hops and reached 151.101.153.67 Ip adress with RTT 47.042ms.\\
-From US(Seattle)           : Took 5 hops and reached 151.101.53.67 Ip adress with RTT 22.469ms. \\
-From Croatia(Prague)         : Took 8 hops and reached 199.232.17.67 Ip adress with RTT 13.528ms . \\
-From Saudi-Arabia(Riyadh)  : Took 6 hops and reached 151.101.1.67 Ip adress with RTT 22.6ms. \\
-From Austria(Vienna)       : Took 7 hops and reached 151.101.1.67 Ip adress with RTT 10.838ms. \\
-From South Korea(Seoul)      : Took 11 hops and reached 151.101.109.67 Ip adress with RTT 24.44ms.\\ 
+\item Data recorded by 190050077:\\
+From local machine    \\
+: Took 8 hops and reached 172.28.132.237 IP address with RTT 22.731ms.\\
+From Paris(France)  \\
+: Took 7 hops and reached 151.101.121.67 IP address with RTT 13.524ms.\\
+From Virginia(US)   \\
+: Took 7 hops and reached 199.232.65.67 IP address with RTT 1.102ms.\\
+From Sydney(Australia)\\
+: Took 4 hops and reached 151.101.97.67  IP address with RTT 13.534ms.\\
+From St.Petersburg(Russia) \\
+: Took 6 hops and reached 151.101.1.67   IP address with RTT 31.178ms.\\
+From Pune(India)      \\
+: Took 6 hops and reached 151.101.153.67  IP address with RTT 4.261ms.\\
+
+\item Data recorded by 190050079:\\
+From local machine  \\
+: Took 8 hops and reached 199.232.253.67 IP address with RTT 42.227ms.\\
+From London(UK)   \\
+: Took 6 hops and reached 51.101.61.67  IP address with RTT 1.306ms.\\
+From Toronto(CA)   \\
+: Took 7 hops and reached 172.217.165.4 IP address with RTT 0.691ms.\\
+From Perth(Australia)  \\
+: Took 8 hops and reached 216.58.199.36 IP address with RTT 46.308ms.\\
+From Vancouver(CA)       \\
+: Took 7 hops and reached  172.217.5.196 IP address with RTT 3.483ms.\\
+From Auckland(Newzland)   \\
+: Took 11 hops and reached 142.250.66.164 IP address with RTT 35.356ms.\\ 
+\end{itemize}
 
 Domain Name : \tbf{iitd.ac.in} \\
+\begin{itemize}
+    \item Data recorded by 190050055:\\
+From local machine  \\
+: Took 16 hops and reached 103.27.9.24 IP address with RTT 64.468ms.\\
+From US(Seattle)    \\
+: Took 12 hops and reached 103.27.9.24 IP address with RTT 186.26ms. \\
+From Croatia(Prague) \\
+: Took 19 hops and reached 103.27.9.24 IP address with RTT 178.34ms.  \\
+From Saudi-Arabia(Riyadh)\\
+: Took 10 hops and reached 103.27.9.24 IP address with RTT 212.23ms. \\
+From Austria(Vienna)    \\
+: Took 16 hops and reached 103.27.9.24 IP address with RTT 126.45ms. \\
+From South Korea(Seoul)   \\
+: Took 19 hops and reached 103.27.9.24 IP address with RTT 146.6ms.\\  
 
-From local machine           : Took 16 hops and reached 103.27.9.24 Ip adress with RTT 64.468ms.\\
-From US(Seattle)           : Took 12 hops and reached 103.27.9.24 Ip adress with RTT 46.6ms. \\
-From Croatia(Prague)         : Took 19 hops and reached 103.27.9.24 Ip adress with RTT 46.6ms.  \\
-From Saudi-Arabia(Riyadh)  : Took 10 hops and reached 103.27.9.24 Ip adress with RTT 46.6ms. \\
-From Austria(Vienna)       : Took 16 hops and reached 103.27.9.24 Ip adress with RTT 46.6ms. \\
-From South Korea(Seoul)      : Took 19 hops and reached 103.27.9.24 Ip adress with RTT 46.6ms.\\  
+\item Data recorded by 190050077:\\
+From local machine    \\
+: Took 25 hops and reached 103.27.9.24 IP address with RTT 55.98.\\
+From Paris(France)  \\
+: Took 24 hops and reached 103.27.9.24 IP address with RTT 157.984ms.\\
+From Virginia(US)   \\
+: Took 16 hops and reached 103.27.9.24 IP address with RTT 286.064ms.\\
+From Sydney(Australia)\\
+: Took 24 hops and reached 103.27.9.24  IP address with RTT 230.156ms.\\
+From St.Petersburg(Russia) \\
+: Took 22 hops and reached 103.27.9.24   IP address with RTT 177.634ms.\\
+From Pune(India)      \\
+: Took 10 hops and reached 103.27.9.24  IP address with RTT 30.667ms.\\
+
+\item Data recorded by 190050079:\\
+From local machine  \\
+: Took 26 hops and reached 103.27.9.24 IP address with RTT 54.201ms.\\
+From London(UK)   \\
+: Took 22 hops and reached 103.27.9.24  IP address with RTT 156.941ms.\\
+From Toronto(CA)   \\
+: Took 22 hops and reached 103.27.9.24 IP address with RTT 242.325ms.\\
+From Perth(Australia)  \\
+: Took 24 hops and reached 103.27.9.24 IP address with RTT 115.218ms.\\
+From Vancouver(CA)       \\
+: Took 18 hops and reached 103.27.9.24 IP address with RTT 286.586ms.\\
+From Auckland(Newzealand)   \\
+: Took 25 hops and reached 103.27.9.24 IP address with RTT  192.999ms.\\ 
+\end{itemize}
+ 
+ Destination IP address is the same for the same URL, no matter where the source of the
+traceroute is only for the iitd.ac.in .For both other two URL the destination IP address varies in few places.
+
+  \hspace{0.3in}  DNS server changes the address it gives you based on your location. A DNS name may have multiple A records, clients may then choose any record and use that address.
+ DNS servers are also giving you different A records depending on your IP address so that you may use a server close to you. The DNS(Domain Name System) is the system to link domain name.ex: www.google.com and IP address
+to each other.
+
+\hspace{0.3in} 
+The names we use are called domain names, and the databases that we access to map the domain names to IP addresses are domain name servers (DNS). The Internet Corporation for Assigned Names and Numbers (ICANN) runs the Domain Name System, a series of DNS which map user-friendly names to their corresponding IP addresses.
+
+\hspace{0.3in}Google uses CDN.
+CDN nodes(servers) are usually deployed in multiple locations.This may be by directing
+requests to locations that are the fewest hops, the lowest number of network seconds
+away from the requesting client, or the highest availability in terms of server performance
+(both current and historical), so as to optimize delivery across local networks.Simlarly CNN
+is using simlar kind of service as they have different destination IP address at different locations.
+
+\newpage
+\centerline{ \Large{(iii)\textbf{Ping}}}
 
 
-
-\large{Ping}
-
+\normalsize
 \begin{table}[H]
     \centering
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{|c| c| c| c|}
          \hline
-         \textbf{Domain Name} & \textbf{IP Adress} & \textbf{Location} & \textbf{RTT(in ms)}\\
+         \textbf{Domain Name} & \textbf{IP Address} & \textbf{Location} & \textbf{Avg RTT(in ms)}\\
          \hline
-         google.com& 8.8.8.8 & USA & 40.043 \\
+         google.com &  8.8.8.8 & USA & 40.043 \\
          \hline
          google.com& 172.217.163.68 & USA  & 38.075 \\
          \hline
@@ -151,55 +262,276 @@ From South Korea(Seoul)      : Took 19 hops and reached 103.27.9.24 Ip adress wi
          \hline
          telstra.com.au&  139.130.4.5 & Australia   & 196.374 \\
          \hline
-         $Queue length$ &   205.210.42.205 & 1000 & 1000\\
+         zoho.com &   204.141.42.155  & Singapore & 176.42\\
          \hline
-         $MTU$ &  1500 & 1500 & 1500\\
+         africa.com &  198.71.233.51 & Paris & 80.13\\
          \hline        
           
     \end{tabular}%
 }
-    \caption{Ping Data}
+    \caption{Ping Data collected by 190050055}
     \label{Table 1:}
 \end{table}
 
-\tbf{\large{Iperf}}\\
 
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|c| c| c| c| c| c| c| c|}
+         \hline
+          \textbf{IP Address} & \textbf{Location} & \textbf{RTT1(Avg)} & \textbf{RTT1(Max)} & \tbf{RTT1(Min)} & \textbf{RTT2(Avg)} & \textbf{RTT2(Max)} & \textbf{RTT2(Min)}\\
+         \hline
+         137.59.155.14&BANGLADESH&100.333&112.147& 94.179 &	203.527 &		205.193& 	202.664\\
+         \hline
+         184.67.74.179 &CANADA& 392.436& 441.359&345.585&	168.317& 	170.582 & 166.604\\
+         \hline
+         80.248.14.50 &NIGERIA& 343.181&730.826&250.830&	118.873 &	118.936&118.771\\
+         \hline
+         164.77.245.34&CHILE&459.551&505.027&411.173&	217.955&	217.991& 	217.869\\
+         \hline
+         45.124.52.17&AUSTRALIA&224.071&273.093&181.56&	279.98&	566.19& 186.937\\
+         \hline
+    \end{tabular}%
+}
+    \caption{Ping Data collected by 190050077}
+    \label{Table 1:}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|c| c| c| c| c| c| c| c|}
+         \hline
+          \textbf{IP Address} & \textbf{Location} & \textbf{RTT1(Avg)} & \textbf{RTT1(Max)} & \tbf{RTT1(Min)} & \textbf{RTT2(Avg)} & \textbf{RTT2(Max)} & \textbf{RTT2(Min)}\\
+         \hline
+         45.124.52.17 &AUSTRALIA& 196.308 & 251.869 & 	134.535 & 	241.062 & 242.602 &	239.132\\
+         \hline
+         81.211.96.62 &RUSSIA&286.812 &352.147 &235.887&61.152  & 61.925 &	60.848 \\
+         \hline
+         122.129.64.10  &PAKISTAN&203.090&264.662&148.130&		131.732  &		131.874 &	131.594 \\
+         \hline
+        87.23.196.161 &ITALY& 321.080 & 360.837 & 281.553 & 	76.176 & 76.632 & 75.786\\
+         \hline
+        184.67.74.179 &CANADA& 425.356& 648.593&338.487&	385.703& 	522.872 & 325.046\\
+         \hline
+    \end{tabular}%
+}
+    \caption{Ping Data collected by 190050079}
+    \label{Table 1:}
+\end{table}
+\textbf{NOTE:} RTT1 and RTT2 are RTT (Machine)  and RTT (https://ping.eu/) respectively both measured in ms.\\
+
+Round-trip time (RTT) is the duration in milliseconds (ms) it takes for a network request to go from a starting point to a destination and back again to the starting point.
+
+\hspace{0.2 in}There is a distance delay and all other things being equal (routing efficiency, processing overhead, congestion, etc.) a site on the west coast accessed by a host on the east coast is going to take longer than if that site is on the east coast .
+
+\hspace{0.2 in}Although a connection optimized by a CDN can often reduce the number of hops required to reach a destination, there is no way of getting around the limitation imposed by the speed of light; the distance between a start and end point is a limiting factor in network connectivity that can only be reduced by moving content closer to the requesting users. To overcome this obstacle, a CDN will cache content closer to the requesting users, thereby reducing RTT.
+\newpage
+\centerline{\Large(iv)\tbf{Iperf}}
 \normalsize
+\begin{itemize}
+    \item Data Collected by 190050077:
 
-On connecting to the server \tbf{bouygues.iperf.fr} which is located in France: \\
-For \tbf{TCP} : \\
-Observed \tbf{TCP} Bandwidth rate (in Mbps) : 22.2  \\
-For \tbf{UDP} :\\
-Observed throughput for 1Mb  (in Mbps) : 1.03 \\
-Observed throughput for 2Mb  (in Mbps) : 2.02 \\
-Observed throughput for 4Mb  (in Mbps) : 4.04 \\
-Observed throughput for 8Mb  (in Mbps) : 8.02 \\
-Observed throughput for 16Mb (in Mbps) : 16.1 \\
-Observed throughput for 32Mb (in Mbps) : 22.2 \\
+\begin{table}[H]
+    \centering
+    \resizebox{1.05\textwidth}{!}{%
+    \begin{tabular}{|c| c| c|}
+         \hline
+         \textbf{Server Name} & \textbf{Server IP Address} & \textbf{Bandwidth Rate}\\
+         \hline
+         ping-90ms.online.net & 62.210.18.41 & 43.3 Mbits/sec \\
+         \hline
+         ping.online.net & 62.210.18.40  & 56.2 Mbits/sec  \\
+         \hline
+    \end{tabular}%
+} \caption{TCP Bandwidth Rates}
+\end{table}
+For UDP,
+For the server ”ping.online.net” with IP address 62.210.18.40 the following bandwidth speed is recorded\\
+\begin{table}[H]
+    \begin{tabular}{|c| c|}
+         \hline
+         \textbf{UDP Rate} &  \textbf{Bandwidth Rate}\\
+         \hline
+         1M & 1.05 Mbits/sec\\
+         2M &  2.10 Mbits/sec\\
+         4M &  4.19 Mbits/sec\\
+         8M & 8.39 Mbits/sec
+\\
+        16M &      16.8 Mbits/sec\\
+        
+        32M & 33.6 Mbits/sec
+\\
+64M & 67.1 Mbits/sec
+\\
+128M & 79.9 Mbits/sec
+\\
+\hline
+    \end{tabular}%
+\end{table}
+Therefore, the value of X = 128Megabits.\\
 
-Therfore the value of X is 32 Megabits.\\
+For the server ”ping-90ms.online.net” with IP address 62.210.18.41 the following bandwidth speed is recorded:
+\begin{table}[H]
+    \begin{tabular}{|c| c|}
+         \hline
+         \textbf{UDP Rate} &  \textbf{Bandwidth Rate}\\
+         \hline
+         1M & 1.05 Mbits/sec
+\\
+         2M &   2.10 Mbits/sec
+\\
+         4M &   4.19 Mbits/sec
+\\
+         8M & 8.39 Mbits/sec
 
+\\
+        16M &  16.8 Mbits/sec
+\\
+        
+        32M & 33.6 Mbits/sec
+\\
+        64M & 67.1 Mbit/sec\\
+        128M &  83.0 Mbits/sec
+\\
+\hline
+    \end{tabular}%
+\end{table}
+Therefore, the value of X = 128Megabits.\\
 
+    \item Data Collected by 190050055:
+\begin{table}[H]
+    \centering
+    \resizebox{1.05\textwidth}{!}{%
+    \begin{tabular}{|c| c| c|}
+         \hline
+         \textbf{Server Name} & \textbf{Server IP Address} & \textbf{Bandwidth Rate}\\
+         \hline
+         bouygues.iperf.fr & 89.84.1.222 & 22.2 Mbits/sec \\
+         \hline
+         iperf.biznetnetworks.com & 117.102.109.186  & 19.9  Mbits/sec  \\
 
-On connecting to the server \tbf{iperf.biznetnetworks.com} which is located in Indonesia: \\
-For \tbf{TCP} : \\
-Observed \tbf{TCP} Bandwidth rate (in Mbps) : 19.9  \\
-For \tbf{UDP} :\\
-Observed throughput for 1Mb  (in Mbps) : 1.08 \\
-Observed throughput for 2Mb  (in Mbps) : 2.03 \\
-Observed throughput for 4Mb  (in Mbps) : 4.02 \\
-Observed throughput for 8Mb  (in Mbps) : 8.00 \\
-Observed throughput for 16Mb (in Mbps) : 16.1 \\
-Observed throughput for 32Mb (in Mbps) : 19.3 \\
+         \hline
+    \end{tabular}%
+} \caption{TCP Bandwidth Rates}
+\end{table}
+For UDP,
+For the server ”bouygues.iperf.fr” with IP address 89.84.1.222 the following bandwidth speed is recorded\\
+\begin{table}[H]
+    \begin{tabular}{|c| c|}
+         \hline
+         \textbf{UDP Rate} &  \textbf{Bandwidth Rate}\\
+         \hline
+         1M & 1.03 Mbits/sec\\
+         2M &  2.02 Mbits/sec\\
+         4M &  4.04 Mbits/sec\\
+         8M & 8.02 Mbits/sec
+\\
+        16M &   16.1 Mbits/sec\\
+        
+        32M & 22.2 Mbits/sec
+\\
+\hline
+    \end{tabular}%
+\end{table}
+Therefore, the value of X = 32Megabits.\\
 
-Therfore the value of X is 32 Megabits.\\
+For the server ”iperf.biznetnetworks.com” with IP address 117.102.109.186 the following bandwidth speed is recorded:
+\begin{table}[H]
+    \begin{tabular}{|c| c|}
+         \hline
+         \textbf{UDP Rate} &  \textbf{Bandwidth Rate}\\
+         \hline
+         1M & 1.08 Mbits/sec
+\\
+         2M &   2.03 Mbits/sec
+\\
+         4M &   4.02 Mbits/sec
+\\
+         8M & 8.00 Mbits/sec
 
-We can see that \tbf{TCP} bandwidth rate is much higher than \tbf{UDP} because \tbf{TCP} 
-makes better use of the bandwidth.
-The reason is because TCP will try and buffer the data and fill a full network segment thus making more efficient use of the available bandwidth.
+\\
+        16M &  16.1 Mbits/sec
+\\
+        
+        32M & 19.3 Mbits/sec
+\\
+\hline
+    \end{tabular}%
+\end{table}
+Therefore, the value of X = 32Megabits.\\
 
-UDP on the other hand puts the packet on the wire immediately thus congesting the network with lots of small packets.
+    \item Data Collected by 190050079:
+\begin{table}[H]
+    \centering
+    \resizebox{1.05\textwidth}{!}{%
+    \begin{tabular}{|c| c| c|}
+         \hline
+         \textbf{Server Name} & \textbf{Server IP Address} & \textbf{Bandwidth Rate}\\
+         \hline
+         iperf.volia.net & 77.120.3.236  &  61.2 Kbits/sec\\
+         \hline
+         speedtest.serverius.net & 178.21.16.76  & 61.8 Kbits/sec\\
+         \hline
+    \end{tabular}%
+} \caption{TCP Bandwidth Rates}
+\end{table}
+For UDP,
+For the server ” iperf.volia.net” with IP address 77.120.3.236 the following bandwidth speed is recorded\\
+\begin{table}[H]
+    \begin{tabular}{|c| c|}
+         \hline
+         \textbf{UDP Rate} &  \textbf{Bandwidth Rate}\\
+         \hline
+         1M & 1.05 Mbits/sec\\
+         2M &  2.10 Mbits/sec\\
+         4M &  4.19 Mbits/sec\\
+         8M & 8.39 Mbits/sec
+\\
+        16M &   16.8 Mbits/sec\\
+        
+        32M & 33.6 Mbits/sec
+\\
+64M & 67.1 Mbits/sec
+\\
+128M & 87.4 Mbits/sec
+\\
+\hline
+    \end{tabular}%
+\end{table}
+Therefore, the value of X = 128Megabits.\\
 
+For the server ”speedtest.serverius.net ” with IP address 178.21.16.76 the following bandwidth speed is recorded:
+\begin{table}[H]
+    \begin{tabular}{|c| c|}
+         \hline
+         \textbf{UDP Rate} &  \textbf{Bandwidth Rate}\\
+         \hline
+         1M & 1.05 Mbits/sec
+\\
+         2M &   2.10 Mbits/sec
+\\
+         4M &   4.19 Mbits/sec
+\\
+         8M & 8.39 Mbits/sec
 
+\\
+        16M &  16.8 Mbits/sec
+\\
+        
+        32M & 33.6 Mbits/sec
+\\
+64M & 67.1 Mbits/sec\\
+128M & 86.6 Mbits/sec\\
+\hline
+    \end{tabular}%
+\end{table}
+Therefore, the value of X = 128Megabits.\\
+\end{itemize}
+The UDP rate thus obtained is much larger than the TCP rate that is obtained for the same server,for all three observations.\\
+
+As we can see that UDP rate is much higher than TCP because because UDP is faster,simple 
+than TCP and also TCP takes care of retransmisson of lost data packets and also it does a lot
+of error checking which UDP does noyt.Hence this makes UDP to be faster than TCP and hence 
+higher bitrates.
 \end{document}
- 
