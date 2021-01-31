@@ -80,7 +80,7 @@
 % \begin{table}[H]
 %     \centering
 %     \begin{tabular}{|c| c| c|}
-%                  \hline
+%                  \hlinebouygues.iperf.fr
 %                  \textbf{Sonnandh} & \textbf{Bharani} & \textbf{Kranthi}\\
 %                  \hline
 %                  $Interface$& Cabi & uhcueg \\
@@ -101,10 +101,11 @@
   
 \tbf{MTU} stands for \tbf{Maximum Transmission unit} which is measured in \tbf{bytes}.
 
-\huge{Traceroute}
+\large{Traceroute}
 
 
-\huge{Ping}
+
+\large{Ping}
 
 \begin{table}[H]
     \centering
@@ -132,8 +133,23 @@
     \label{Table 1:}
 \end{table}
 
-\huge{Iperf}
+\tbf{\large{Iperf}}
 
+On connecting to the server \tbf{bouygues.iperf.fr} which is located in France: \\
+Observed \tbf{TCP} Bandwidth rate (in Mbps) : 2.49  \\
+Observed throughput for 1Mb \tbf{UDP} (in Mbps) : 0.13 \\
+
+
+
+On connecting to the server \tbf{iperf.biznetnetworks.com} which is located in Indonesia: \\
+Observed \tbf{TCP} Bandwidth rate (in Mbps) : 2.23  \\
+Observed throughput for 1Mb \tbf{UDP} (in Mbps) : 0.13 \\
+
+We can see that \tbf{TCP} bandwidth rate is much higher than \tbf{UDP} because \tbf{TCP} 
+makes better use of the bandwidth.
+The reason is because TCP will try and buffer the data and fill a full network segment thus making more efficient use of the available bandwidth.
+
+UDP on the other hand puts the packet on the wire immediately thus congesting the network with lots of small packets.
 
 
 \end{document}
