@@ -102,6 +102,7 @@
 \tbf{MTU} stands for \tbf{Maximum Transmission unit} which is measured in \tbf{bytes}.
 
 \tbf{\large{Traceroute}}
+\normalsize
 
 Domain Name : \tbf{google.com} \\
 
@@ -161,17 +162,37 @@ From South Korea(Seoul)      : Took 19 hops and reached 103.27.9.24 Ip adress wi
     \label{Table 1:}
 \end{table}
 
-\tbf{\large{Iperf}}
+\tbf{\large{Iperf}}\\
+
+\normalsize
 
 On connecting to the server \tbf{bouygues.iperf.fr} which is located in France: \\
-Observed \tbf{TCP} Bandwidth rate (in Mbps) : 2.49  \\
-Observed throughput for 1Mb \tbf{UDP} (in Mbps) : 0.13 \\
+For \tbf{TCP} : \\
+Observed \tbf{TCP} Bandwidth rate (in Mbps) : 22.2  \\
+For \tbf{UDP} :\\
+Observed throughput for 1Mb  (in Mbps) : 1.03 \\
+Observed throughput for 2Mb  (in Mbps) : 2.02 \\
+Observed throughput for 4Mb  (in Mbps) : 4.04 \\
+Observed throughput for 8Mb  (in Mbps) : 8.02 \\
+Observed throughput for 16Mb (in Mbps) : 16.1 \\
+Observed throughput for 32Mb (in Mbps) : 22.2 \\
+
+Therfore the value of X is 32 Megabits.\\
 
 
 
 On connecting to the server \tbf{iperf.biznetnetworks.com} which is located in Indonesia: \\
-Observed \tbf{TCP} Bandwidth rate (in Mbps) : 2.23  \\
-Observed throughput for 1Mb \tbf{UDP} (in Mbps) : 0.13 \\
+For \tbf{TCP} : \\
+Observed \tbf{TCP} Bandwidth rate (in Mbps) : 19.9  \\
+For \tbf{UDP} :\\
+Observed throughput for 1Mb  (in Mbps) : 1.08 \\
+Observed throughput for 2Mb  (in Mbps) : 2.03 \\
+Observed throughput for 4Mb  (in Mbps) : 4.02 \\
+Observed throughput for 8Mb  (in Mbps) : 8.00 \\
+Observed throughput for 16Mb (in Mbps) : 16.1 \\
+Observed throughput for 32Mb (in Mbps) : 19.3 \\
+
+Therfore the value of X is 32 Megabits.\\
 
 We can see that \tbf{TCP} bandwidth rate is much higher than \tbf{UDP} because \tbf{TCP} 
 makes better use of the bandwidth.
